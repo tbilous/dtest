@@ -6,6 +6,7 @@ class Donation < ApplicationRecord
 
   scope :by_types, ->(type) { where(donation_type: type) }
   scope :by_users, ->(user) { where(user_id: user) }
+  scope :group_by_date, -> { group('date(date)').count(:id) }
 
   def self.search(query)
     search_params = {

@@ -37,6 +37,7 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'devise'
 gem 'devise-i18n'
 gem 'jquery-rails'
+gem 'responders'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,6 +61,7 @@ group :test do
   gem 'capybara', '3.2.1'
   gem 'capybara-webkit'
   gem 'database_cleaner'
+  gem 'json_spec'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
