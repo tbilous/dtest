@@ -8,9 +8,12 @@ require File.expand_path('../config/environment', __dir__)
 require 'rspec/rails'
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/shared_contexts/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/shared_examples/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.include AbstractController::Translation
+  config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Rails.application.routes.url_helpers
 
   config.expect_with :rspec do |expectations|
