@@ -1,3 +1,6 @@
 class HomeController < ApplicationController
-  def show; end
+
+  def show
+    @users = User.all.includes(:donations)
+  end
 end
