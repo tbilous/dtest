@@ -1,5 +1,7 @@
 require 'rubygems'
 require 'database_cleaner'
+require 'capybara/rspec'
+require 'devise'
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
@@ -18,4 +20,5 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
   config.shared_context_metadata_behavior = :apply_to_host_groups
+  config.include Capybara::DSL
 end

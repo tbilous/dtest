@@ -34,9 +34,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap-sass', '3.3.7'
 gem 'devise'
-gem 'devise-bootstrap-views'
 gem 'devise-i18n'
 gem 'jquery-rails'
+gem 'activeadmin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -61,6 +61,10 @@ group :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'capybara', '3.2.1'
+  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
+  gem 'timecop'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
