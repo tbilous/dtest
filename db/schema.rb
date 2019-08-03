@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_03_051227) do
+ActiveRecord::Schema.define(version: 2019_08_03_082551) do
+
+  create_table "donation_types", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "donation_type_id"
+    t.datetime "date", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["donation_type_id", "user_id"], name: "index_donations_on_donation_type_id_and_user_id"
+    t.index ["donation_type_id"], name: "index_donations_on_donation_type_id"
+    t.index ["user_id"], name: "index_donations_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
