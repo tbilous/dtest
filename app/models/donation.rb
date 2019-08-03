@@ -4,8 +4,8 @@ class Donation < ApplicationRecord
 
   validates_presence_of :date
 
-  scope :by_types, -> (type) { where(donation_type: type) }
-  scope :by_users, -> (user) { where(user_id: user) }
+  scope :by_types, ->(type) { where(donation_type: type) }
+  scope :by_users, ->(user) { where(user_id: user) }
 
   def self.search(query)
     search_params = {

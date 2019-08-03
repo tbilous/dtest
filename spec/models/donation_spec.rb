@@ -9,19 +9,19 @@ RSpec.describe Donation, type: :model do
     let(:nik) { create :user }
     let(:types) { create_list :donation_type, 2 }
     let!(:john_donations) do
-      types.each  do |i|
-        create(:donation, user: john, donation_type: i, date: Date.current )
+      types.each do |i|
+        create(:donation, user: john, donation_type: i, date: Date.current)
       end
     end
 
     let!(:nik_donations) do
-      types.each  do |i|
-        create(:donation, user: nik, donation_type: i, date: Date.current )
+      types.each do |i|
+        create(:donation, user: nik, donation_type: i, date: Date.current)
       end
     end
 
     context 'where params nil' do
-      let(:params) { { user_id: nil,  donation_type_id: nil } }
+      let(:params) { { user_id: nil, donation_type_id: nil } }
       subject { described_class.search(params) }
 
       it 'return all donations' do
@@ -30,8 +30,8 @@ RSpec.describe Donation, type: :model do
     end
 
     context 'where params user_id nil donation_type_id query' do
-      let(:type) {  DonationType.first }
-      let(:params) { { user_id: nil,  donation_type_id: type.id } }
+      let(:type) { DonationType.first }
+      let(:params) { { user_id: nil, donation_type_id: type.id } }
       subject { described_class.search(params) }
 
       it 'return all donations' do
@@ -40,8 +40,8 @@ RSpec.describe Donation, type: :model do
     end
 
     context 'where params user_id john.id donation_type_id query' do
-      let(:type) {  DonationType.first }
-      let(:params) { { user_id: john.id,  donation_type_id: type.id } }
+      let(:type) { DonationType.first }
+      let(:params) { { user_id: john.id, donation_type_id: type.id } }
       subject { described_class.search(params) }
 
       it 'return all donations' do
