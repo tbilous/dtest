@@ -16,5 +16,4 @@ ActiveAdmin.register DonationType do
     end
     f.actions
   end
-
 end

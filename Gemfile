@@ -32,11 +32,11 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'activeadmin'
 gem 'bootstrap-sass', '3.3.7'
 gem 'devise'
 gem 'devise-i18n'
 gem 'jquery-rails'
-gem 'activeadmin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -57,13 +57,13 @@ group :development do
 end
 
 group :test do
+  gem 'capybara', '3.2.1'
+  gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
-  gem 'shoulda-matchers'
-  gem 'capybara', '3.2.1'
-  gem 'capybara-webkit'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
   gem 'timecop'
 end
 

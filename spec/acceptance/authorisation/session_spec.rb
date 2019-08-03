@@ -4,7 +4,6 @@ feature 'user can login', %q{
   User can to register
   User can to Sign in
 } do
-
   let(:user) { create(:user) }
   let(:admin) { create(:admin) }
 

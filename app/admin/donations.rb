@@ -24,5 +24,4 @@ ActiveAdmin.register Donation do
     end
     f.actions
   end
-
 end

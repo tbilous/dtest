@@ -7,6 +7,6 @@ class CreateDonations < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    add_index :donations, [:donation_type_id, :user_id]
+    add_index :donations, %i[donation_type_id user_id]
   end
 end
