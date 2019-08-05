@@ -33,11 +33,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'activeadmin'
-gem 'bootstrap-sass', '3.3.7'
 gem 'devise'
 gem 'devise-i18n'
 gem 'jquery-rails'
 gem 'responders'
+gem 'webpacker'
+gem 'gon'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

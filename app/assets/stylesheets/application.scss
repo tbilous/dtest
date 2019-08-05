@@ -14,9 +14,7 @@
  *= require_self
  */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
-@import "bootstrap-sprockets";
-@import "bootstrap";
 
 body {
-  font-family: 'roboto', serif;
+  font-family: 'Roboto', serif;
 }
